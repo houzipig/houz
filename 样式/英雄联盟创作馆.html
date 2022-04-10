@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>英雄联盟创作馆</title>
+  <style>
+  	*{
+		margin: 0;
+		padding: 0;
+	}
+	img{
+		vertical-align: middle; /* 基线对齐方式 */
+	}
+	ul{
+		list-style: none;
+	}
+	.wrap{
+		width: 840px;
+		height: 400px;
+		margin: 50px auto;
+		background-color: #99ffff;
+	}
+	.wrap li{
+		float: left;/* 左浮动 */
+		margin: 10px;
+		overflow: hidden;/* 超出隐藏 */
+		position: relative; /* 相对定位 对应绝对定位 */
+		width: 190px;
+		height: 180px;
+		
+	}
+	.wrap li:hover .images{
+		transform: scale(1.3);/* css3变换属性 比例 */
+		transition: .8s;
+	}
+	.wrap li:hover .hide{/* 伪类 当鼠标移入li时 hide执行{}代码 */
+		bottom: 0;
+	}
+	.images{
+		width: 100%;
+		height: 100%;
+	}
+
+	.hide{
+		position: absolute; 
+		bottom: -70px;
+		left: 0;
+		/* 绝对定位 跨父集 在没有相对参考物的情况下 跟随浏览器 称呼脱离文档流*/
+		width: 100%;
+		height: 70px;
+		background-color: rgba(0,0,0,.7);/* rgba(红，绿，蓝，透明度0-1) */
+		transition: .8s; /* css过渡动画效果 */
+	}
+	.h-content{
+		padding: 10px;
+		color: #FFF;
+	}
+	.h-img{
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+	}
+	.h-title{
+		margin-top: 10px;
+		font-size: 12px;
+	}
+	/* 标签语义化 -> SEO
+	   h1 -> 主标题 -> 唯一
+	   h2 -> 副标题
+	   块级元素 -> block -> 独占一行
+	   行内元素 -> inline -> 并排站
+	*/
+  </style>
+ </head>
+ <body>
+	<div class="wrap">
+		<ul><!-- 无序列表 -->
+			<li>
+				<img class="images" src="6.10images/1.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/01.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img class="images" src="6.10images/2.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/02.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img class="images" src="6.10images/3.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/03.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img class="images" src="6.10images/4.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/04.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img class="images" src="6.10images/5.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/05.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img class="images" src="6.10images/6.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/06.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img class="images" src="6.10images/7.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/07.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img class="images" src="6.10images/8.jpg">
+				<div class="hide">
+					<div class="h-content">
+						<h5 class="h-name">晴天娃娃 璐璐</h5>
+						<div class="h-title">
+							<img class="h-img" src="6.10images/08.jpg">
+							<span>柯子</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head><!-- 写给浏览器用的 -->
+	<meta charset="UTF-8">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>第二版键盘布局</title><!-- 标题标签 -->
+	<style>/* css样式表 */
+		/* css reset */
+		*{
+		margin:0;
+		padding:0;
+		}
+		.keyboard{
+			position: absolute; /* 绝对定位 BFC机制*/
+			left:10%;
+			display: grid;/* 网格布局 */
+			/* 分为30列，每一列30像素 */
+			grid-template-columns: repeat(30,30px);
+			grid-template-rows: repeat(5,60px);
+			gap: 5px;/* 网格间距 */
+			padding:20px;/* 内边距 */
+			margin: 50px auto;/* 外边距 前：上下 后：左右 auto是居中 */
+			background-color: red;/* 背景颜色 */
+			border-radius: 30px;
+		}
+		.key{
+			grid-column: span 2;/* 合并两个单元格 */
+			background-color: #F3F3F3;
+			line-height: 50px; /* 行高 = 高度 -> 垂直居中 */
+			text-align: center;/* 文本对齐居中 */
+			border: 2px solid;/* 边框属性 粗细 样式(solid实现 dashed虚线 dotted点线) 颜色 */
+			border-radius: 10px;/* css圆角属性 */
+			cursor: pointer;/* 鼠标指针 手状 */
+		}
+		.key:hover{/* 伪类：鼠标放入名为key里时执行{}中代码 */
+			color:#fff;
+		}
+		.delete,
+		.capslk,
+		.enter,
+		.shift{
+			grid-column: span 4;
+		}
+		.tab,
+		.backslash,
+		.ctrl,
+		.command{
+			grid-column: span 3;
+		}
+
+		.space{
+			grid-column: span 13;
+		}
+
+
+
+
+	</style>
+
+ </head>
+ <body><!-- 写给用户看的 写给人看的 -->
+	<div class="keyboard"><!-- 盒子标签 class是命名 -->
+		<div class="key">~</div>
+		<div class="key">1</div>
+		<div class="key">2</div>
+		<div class="key">3</div>
+		<div class="key">4</div>
+		<div class="key">5</div>
+		<div class="key">6</div>
+		<div class="key">7</div>
+		<div class="key">8</div>
+		<div class="key">9</div>
+		<div class="key">0</div>
+		<div class="key">-</div>
+		<div class="key">+</div>
+		<div class="key delete">Delete</div>
+		<div class="key tab">Tab</div>
+		<div class="key">q</div>
+		<div class="key">w</div>
+		<div class="key">e</div>
+		<div class="key">r</div>
+		<div class="key">t</div>
+		<div class="key">y</div>
+		<div class="key">u</div>
+		<div class="key">i</div>
+		<div class="key">o</div>
+		<div class="key">p</div>
+		<div class="key">[</div>
+		<div class="key">]</div>
+		<div class="key backslash">\</div>
+		<div class="key capslk">CapsLK</div>
+		<div class="key">a</div>
+		<div class="key">s</div>
+		<div class="key">d</div>
+		<div class="key">f</div>
+		<div class="key">g</div>
+		<div class="key">h</div>
+		<div class="key">j</div>
+		<div class="key">k</div>
+		<div class="key">l</div>
+		<div class="key">;</div>
+		<div class="key">'</div>
+		<div class="key enter">Enter</div>
+		<div class="key shift">Shift</div>
+		<div class="key">z</div>
+		<div class="key">x</div>
+		<div class="key">c</div>
+		<div class="key">v</div>
+		<div class="key">b</div>
+		<div class="key">b</div>
+		<div class="key">n</div>
+		<div class="key">m</div>
+		<div class="key">,</div>
+		<div class="key">.</div>
+		<div class="key">/</div>
+		<div class="key shift">Shift</div>
+		<div class="key ctrl">Ctrl</div>
+		<div class="key">Win</div>
+		<div class="key">Alt</div>
+		<div class="key space">Space</div>
+		<div class="key">Alt</div>
+		<div class="key">Fn</div>
+		<div class="key command">Command</div>
+		<div class="key ctrl">Ctrl</div>
+	</div>
+ </body>
+</html>
+<!-- 
+	绿色的注释标签
+	命名要规范
+	现在前端注重性能和效率 简约代码 降低维护成本 自适应布局
+	代码英文用小写
+-->

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>天下3官网切换</title>
+  <style>
+	.tab{
+		width: 1200px;
+		height: 575px;
+		margin: 50px auto;
+		background-color: #9966ff;
+	}
+	.text{
+		float: left;/* 浮动（横排） -> left向左 具有块元素 */
+		width: 300px;
+		/* 背景复合 颜色 图片 不重复 位置 */
+		background: url(6.9images/bg1.png) no-repeat center;
+		color: #FFF;
+		text-decoration: none;/* 取消默认下划线 */
+		text-align: center;
+		line-height: 75px;
+		font-family: "楷体";
+		font-size: 18px;
+		font-weight: bold;/* 字体-粗细 */
+	}
+	.pic{
+		height: 575px;
+		background-image: url(6.9images/p1.png);
+		transition: .9s; /* 过渡动画样式 */
+	}
+	/* :hover鼠标悬停text 修改他自身样式 */
+	.text:hover{
+		background-image: url(6.9images/bg2.png);
+		color: #FCC63D;
+	}
+	/*~指代兄弟关系 :hover鼠标悬停text 修改pic自身样式 */
+	/* nth-child()选择同名里第几个进行修改自身样式 */
+	.text:nth-child(2):hover ~ .pic{
+		background-image: url(6.9images/p2.png)
+	}
+	.text:nth-child(3):hover ~ .pic{
+		background-image: url(6.9images/p3.png)
+	}
+	.text:nth-child(4):hover ~ .pic{
+		background-image: url(6.9images/p4.png)
+	}
+	/* 元素分类 -> 标签
+		块元素 -> 默认设置宽高能够生效 -> div 独占一行
+		行内元素 -> 默认设置宽高不能生效 -> a */
+  </style>
+ </head>
+ <body>
+	<div class="tab">
+		<!-- 超链接标签 点击跳转 跳转地址 属性的... -->
+		<a class="text" href="http://www.baidu.com">全新剧情</a>
+		<a class="text" href="http://www.baidu.com">全新动态地图</a>
+		<a class="text" href="http://www.baidu.com">全新战场</a>
+		<a class="text" href="http://www.baidu.com">全新社交</a>
+		<div class="pic"></div>
+	</div>
+ </body>
+</html>

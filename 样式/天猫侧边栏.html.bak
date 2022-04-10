@@ -1,0 +1,66 @@
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>天猫侧边栏</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1879895_21mxu0cp681.css"><!-- 引入外部样式 -->
+	<style>
+/* 		*{练习可以使用通配符
+		margin: 0;
+		padding: 0;		
+		} */
+		body{
+			margin:0;
+		}
+		.box{
+			width: 200px;
+			height: 500px;
+			background-color: #00ffff;
+		}
+		.disorder{
+			list-style: none;
+			padding: 0;
+		}
+		.disorder li{
+			width: 200px;
+			height: 31.25px;
+			font-size: 14px;
+			color: #FFF;
+			line-height: 31.25px; /* 行高 文字所占高度=行内高度 -> 垂直居中 */
+		}
+		.disorder li:hover{
+			background: #99ff99;
+			color: #ff66cc;
+		}
+		i{
+			margin: 0 4px 0 14px;
+		}
+		/* <i></i> 老版本：斜体 新版本：图标(icon)	 */
+	</style>
+ </head>
+ <body>
+	<div class="box">
+		<ul class="disorder">
+			<li><i class="iconfont icon-zuanshi"></i>家用电器</li>
+			<li><i class="iconfont icon-shouji1"></i>手机/运营商/数码</li>
+			<li><i class="iconfont icon-diannao"></i>电脑/办公</li>
+			<li><i class="iconfont icon-icon-test1"></i>家居/家具/家装厨具</li>
+			<li><i class="iconfont icon-fuzhuang"></i>男装/女装/童装内衣</li>
+			<li><i class="iconfont icon-icon-test"></i>美妆/个人/清洁/宠物</li>
+			<li><i class="iconfont icon-xiezi"></i>女鞋/箱包/钟表/珠宝</li>
+			<li><i class="iconfont icon-fushi-nanxie"></i>男鞋/运动/户外</li>
+			<li><i class="iconfont icon-icon-test1"></i>房产/汽车/汽车用品</li>
+			<li><i class="iconfont icon-weibiaoti2fuzhi05"></i>母婴/玩具乐器</li>
+			<li><i class="iconfont icon-shipin"></i>食品/酒类/生鲜/特产</li>
+			<li><i class="iconfont icon-yishu"></i>艺术/礼品鲜花/农资绿植</li>
+			<li><i class="iconfont icon-zu"></i>医药保健/计生情趣</li>
+			<li><i class="iconfont icon-tushu"></i>图书/文娱/教育/电子书</li>
+			<li><i class="iconfont icon-jipiao"></i>机票/酒店/旅游/生活</li>
+			<li><i class="iconfont icon-32"></i>理财/众筹/白条/保修</li>
+		</ul>
+	</div>
+ </body>
+</html>

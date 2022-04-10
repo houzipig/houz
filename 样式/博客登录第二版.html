@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>博客登录第二版</title>
+		
+ <style>/* css 样式表 */
+	/* css reset */
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html,
+	body{
+		height:100%;
+	}
+	body{
+		display: grid;/* 网格 */
+		/* display: flex;弹性盒 */
+		/* justify-content: center;主轴方向居中 */
+		/* align-items: center;副轴方向居中 */
+		/* 背景复合样式 路径 不平铺 位置/大小 */
+		background: url(6.8images/1.jpg) no-repeat center/cover;
+
+	}
+	.login{/* class选择器 */
+		/* grid-row: 2;网格两行 */
+		/* grid-column: 3;网格三列 */
+		width: 300px;
+		height: 300px;
+		background: #EBF0F1;
+		margin: auto;
+		border-radius: 12px;/* 圆角属性 顺时针*/
+	}
+	.login:before{
+		display: block;/* 元素类型转换 */
+		content:'';
+		width: 100%;
+		height: 10px;
+		/* 渐变色属性 -webkit-linear-gradient(方向，某颜色占用率开始到某颜色占用率结束，某颜色占用率开始到某颜色占用率结束)*/
+		background-image: -webkit-linear-gradient(left,#27AE60 0%,#27AE60 20%, #8E44AD 20%,#8E44AD 40%, #3498DB 40%,#3498DB 60%, #E74C3C 60%,#E74C3C 80%, #F1C40F 80%,#F1C40F 100%);
+		border-radius: 10px 10px 0 0;/* 圆角属性 顺时针*/
+	}
+	.title{
+		height: 80px;
+		line-height: 80px;/* 行高 */
+		text-align: center;/* 文本对齐 */
+		font-size: 2em;/* 文字大小 1em=16像素 */
+		color: #096;
+	}
+	.login-content{
+		display: flex;
+		justify-content: space-around;/* 均分剩余空间 */
+		align-items:center; /* 副轴居中 */
+		flex-direction: column;/* 改变主轴方向 Y轴 */
+		height: 200px;
+	}
+	.login-content input{
+		width: 80%;
+		height: 40px;
+		text-indent: 1em;/* 首行缩进 */
+		border: 1px solid #BBB;
+		border-radius: 5px;
+		outline: none;/* 去除默认蓝色边框 */
+	}
+	.login-content input[type="submit"]{/* 指名某个样式进行{}中的更改，最高级 */
+		background-color: #E74C3C;
+		text-indent:0;
+		color: #FFF;
+	}
+	/* 
+		重点
+		伪元素 ->不存在DOM -> 不能被选中修改
+		inline ->行内元素 ->不能给宽高 ->类似水
+		block ->块级元素 ->固定宽高 ->类似冰
+		标签语义化
+		H1 -> 主标题标签 做到唯一
+		H2标签 副标题
+	*/
+ </style>
+ </head>
+ <body><!-- 写给用户看的 -->
+	<div class="login"><!-- 盒子标签 -->
+		<!-- <div class="head"></div> -->
+		<h2 class="title">Login</h2>
+		<form class="login-content" action=""><!-- 表单 -->
+			<input type="text" placeholder="请输入账号"><!-- 文本 -->
+			<input type="password" placeholder="请输入密码"><!-- 文本密码 -->
+			<input type="submit" value="sing in"><!-- 文本提交 -->
+		</form>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>爱心飘落特效</title>
+<style>/* css样式表 */
+	.snowfall-flakes:before,
+	.snowfall-flakes:after{/* 伪类不占用空间 */
+		content:'';/* 创建伪类必要条件 */
+		position: absolute; /* 绝对定位 */
+		top: 0;
+		left: 0;
+		width: 10px;
+		height: 16px;
+		background-color: red;
+		border-radius: 5px 5px 0 0;
+	}
+	.snowfall-flakes:before{
+		transform: rotate(-45deg);/* 变换属性 旋转（角度） */
+	}
+	.snowfall-flakes:after{
+		transform: translateX(4.3px) rotate(45deg);/* translateX(数值)以X方向平移数值 性能好*/
+	}
+</style>
+ </head>
+ <body>
+		<script src="js/jquery.js"></script><!-- 调用开发文档 -->
+		<script src="js/snowfall.js"></script>
+		<script>
+			$(document).snowfall({flakeCount : 100, maxSpeed : 10});
+		</script><!-- 使用开发文档 -->
+ </body>
+</html>
